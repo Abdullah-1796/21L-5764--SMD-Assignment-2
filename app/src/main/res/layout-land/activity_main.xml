@@ -2,12 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/portrait"
+    android:id="@+id/landscape"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:fitsSystemWindows="true"
-    android:padding="20dp"
     >
 
     <fragment
@@ -18,9 +17,9 @@
         android:id="@+id/toDoListFrag"
         class="com.example.assignment2.ToDoListFrag"
         tools:layout="@layout/fragment_to_do_list"
-        app:layout_constraintTop_toTopOf="@id/portrait"
-        app:layout_constraintBottom_toBottomOf="@id/portrait"
-    />
+        app:layout_constraintTop_toTopOf="@id/landscape"
+        app:layout_constraintBottom_toBottomOf="@id/landscape"
+        />
 
     <fragment
         android:layout_width="match_parent"
@@ -29,19 +28,19 @@
         android:id="@+id/newTaskFrag"
         class="com.example.assignment2.NewTaskFrag"
         tools:layout="@layout/fragment_new_task"
-        app:layout_constraintTop_toTopOf="@id/portrait"
-        app:layout_constraintBottom_toBottomOf="@id/portrait"
-
+        app:layout_constraintTop_toTopOf="@id/landscape"
+        app:layout_constraintBottom_toBottomOf="@id/landscape"
+        android:padding="20dp"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/portrait"
-        app:layout_constraintBottom_toBottomOf="@id/portrait"
+        app:layout_constraintEnd_toEndOf="@id/landscape"
+        app:layout_constraintBottom_toBottomOf="@id/landscape"
         android:layout_margin="0dp"
         android:id="@+id/btnAddNewTask"
-    />
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
